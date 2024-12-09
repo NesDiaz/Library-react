@@ -75,7 +75,7 @@ export const books = [
   {
     id: 10,
     title: "The 5 Second Rule",
-    url: "https://m.media-amazon.com/images/I/91wOERyhh7L._UF1000,1000_QL80_.jpg",
+    url: "https://covers.openlibrary.org/b/id/8114155-L.jpg",
     originalPrice: 40,
     salePrice: null,
     rating: 5,

@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"name": "Library-react",
+			"path": "../../../Library-react"
+		}
+	],
+	"settings": {}
+}

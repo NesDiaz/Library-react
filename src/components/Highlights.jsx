@@ -1,6 +1,6 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Highlight from "./ui/Highlight";
+import React from "react";
+import Highlight from "./Ui/Highlight";
 
 const Highlights = () => {
   return (
@@ -8,7 +8,7 @@ const Highlights = () => {
       <div className="container">
         <div className="row">
           <h2 className="section__title">
-            Why choose <span className="purple">Library</span>
+            Why Choose <span className="purple">Library</span>
           </h2>
           <div className="highlight__wrapper">
             <Highlight
