@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
@@ -11,7 +12,7 @@ const Book = ({ book }) => {
   useEffect(() => {
     mountedRef.current = true;
 
-    if (!book.url) return; // Handle missing URLs gracefully
+    if (!book.url) return; 
 
     const image = new Image();
     image.src = book.url;
