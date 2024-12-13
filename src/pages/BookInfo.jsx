@@ -3,7 +3,7 @@ import Book from "components/Ui/Book";
 import Price from "components/Ui/Price";
 import Rating from "components/Ui/Rating";
 import React from "react";
-import { Link, useParams } from "react-router-dom/cjs/react-router-dom.min";
+import { Link, useParams } from "react-router-dom";
 
 const BookInfo = ({ books, addToCart, cart }) => {
   const { id } = useParams();
@@ -13,9 +13,7 @@ const BookInfo = ({ books, addToCart, cart }) => {
     addToCart(book);
   }
 
-  function bookExistsOnCart() {
-    return cart.some((cartBook) => cartBook.id === +id); // Use cart array to check
-  }
+  const bookExistsOnCart = cart.some((cartBook) => cartBook.id === +id);
 
   return (
     <div id="books__body">
@@ -32,7 +30,7 @@ const BookInfo = ({ books, addToCart, cart }) => {
             </div>
             <div className="book__selected">
               <figure className="book__selected--figure">
-                <img src={book.url} alt="" className="book__selected--img" />
+                <img src={book.url} alt={book.title} className="book__selected--img" />
               </figure>
               <div className="book__selected--description">
                 <h2 className="book__selected--title">{book.title}</h2>
@@ -57,8 +55,8 @@ const BookInfo = ({ books, addToCart, cart }) => {
                       accusamus alias quae at minus nulla harum!
                     </p>
                   </div>
-                  {bookExistsOnCart() ? (
-                    <Link to={`/cart`} className="book__link">
+                  {bookExistsOnCart ? (
+                    <Link to="/cart" className="book__link">
                       <button className="btn">Checkout</button>
                     </Link>
                   ) : (

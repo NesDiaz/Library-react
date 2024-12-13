@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -36,10 +35,7 @@ const Nav = ({ numberOfItems }) => {
             <Link to="/cart" className="nav__link">
               <FontAwesomeIcon icon="shopping-cart" />
             </Link>
-            {
-              numberOfItems > 0 && <span className="cart__length">{numberOfItems}</span>
-            }
-            
+            {numberOfItems > 0 && <span className="cart__length">{numberOfItems}</span>}
           </li>
         </ul>
         <button className="btn__menu" onClick={openMenu}>

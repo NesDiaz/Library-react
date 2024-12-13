@@ -1,7 +1,6 @@
-// eslint-disable-next-line no-unused-vars
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 import Rating from "./Rating";
 import Price from "./Price";
 
@@ -25,9 +24,9 @@ const Book = ({ book }) => {
     };
 
     return () => {
-      mountedRef.current = false; // Clean up
+      mountedRef.current = false; 
     };
-  }, [book.url]); // Dependency array
+  }, [book.url]);
 
   return (
     <div className="book">
